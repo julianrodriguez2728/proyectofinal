@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+}
+@media screen and (max-width:480px){
+
+    .grid-container{
+        display: grid;
+        grid-template: 
+        "header" 500px
+        "main" auto
+    "footer"100px
+    ;
+    text-align: center;
+}
+.header{
+    grid-area: header;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../IMAGENES/fondo2.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main{
+    grid-area: main;
+    background-color: rosybrown;
+}
+.footer{
+    grid-area: footer;
+    background-color: blue;
+} 
+
+/* header */
+.nav-bar{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(3,1fr);
+    align-items: center;
+    position: fixed;
+}
+.titulo{
+    font-family: 'Splash', cursive;
+    color: white;
+    font-size: 50px;
+}
+.nav-bar .logo{
+    width: 60px;
+    margin-right: 40px;
+    margin-left: 10px;
+}
+.nav-bar .menu{
+    grid-column: 1/7;
+    grid-row: 2/3;
+    display: grid;
+    
+}
+.nav-bar .menu li{
+    list-style: none;
+    margin: 10px;
+}
+.nav-bar .menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+/* MAIN */
+}
+
+
+
+@media screen and (min-width: 480px){
+    
+    
+}
