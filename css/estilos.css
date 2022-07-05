@@ -17,7 +17,7 @@ body{
     #grid-container{
         display: grid;
         grid-template: 
-        "header"    150px
+        "header"    200px
         "main"      auto
         "footer"    100px
     ;
@@ -296,6 +296,15 @@ iframe{
         width: 60px;
         margin-right: 40px ;
     }
+    .animacion{
+        animation-name:animacion ;
+        animation-duration: 0.5s;
+    }
+    @keyframes animacion {
+        from{
+            transform: rotate(45deg);
+        }
+    }
     .nav-bar{
         height: 100%;
     }
@@ -314,6 +323,13 @@ iframe{
         font-size: 30px;
         font-weight: bold;
         font-family: monospace;
+    }
+    .animacion{
+        transition: font-size 0.2s;
+    }
+    .animacion:hover{
+        font-size: 50px;
+        color: rgb(80, 20, 20);
     }
     /* FOOTER */
     footer{
