@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 
 *{
     box-sizing: border-box;
@@ -11,16 +13,477 @@ html{
 body{
     height: 100vh;
 }
-@media screen and (max-width:480px){
-.grid-container{
+@media  screen and (min-width: 1023px){
+    #grid-container{
         display: grid;
         grid-template: 
-        "header"    auto
-        "main"      500px
-        "footer"    700px
+        "header"    150px
+        "main"      auto
+        "footer"    100px
     ;
-    text-align: center;
 }
+.header{
+    grid-area: header;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../IMAGENES/fondo2.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main{
+    grid-area: main;
+    position: relative;
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(32, 20, 3);
+} 
+
+/* HEADER y LOGO */
+#header{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+}
+.logo{
+    height: 100px;
+}
+.titulo{
+    color: rgb(213, 236, 232);
+    font-family: 'Splash', cursive;
+    font-size: 60px;
+    font-weight: bold;
+}
+.nav-bar{
+    grid-column: 2/2;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+.menu li{
+    margin-right: 90px;
+    font-size: 27px;
+    color: #dee7eb;
+    list-style: none;
+}
+.menu a{
+    font-weight: bold;
+    text-decoration: none;
+    
+    
+
+    box-shadow: inset 1 0 0 0 #5f3a10;
+    margin: 0 -.30rem;
+    padding: 0 .30rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.menu a:hover{
+    box-shadow: inset 200px 0 0 0 rgb(102, 54, 8);
+}
+/* FOOTER */
+.subtitulo-footer{
+    color: white;
+    font-size: 40px;
+    font-family: 'Splash', cursive;
+}
+footer img{
+    margin-top: 8px;
+}
+.footer{  
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#footer-logos{
+    max-width: 70px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.whatsapp{
+    height: 40px;
+}
+.facebook{
+    height: 30px;
+}
+.instagram{
+    height: 30px;
+}
+.datos-footer{
+    color: white;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+/* INDEX */
+.carousel{
+    margin: 0 auto;
+    max-width: 900px;
+    
+}
+.carousel img{
+    max-width: 900px;
+    height: 500px;
+}
+.carousel a{
+    text-decoration: none;
+}
+#main{
+    background-image: linear-gradient(rgb(131, 131, 131),rgb(20, 20, 20));
+}
+/* QUIENES SOMOS */
+.quienes-somos{
+    background-color: rgb(254, 255, 205);
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 90%;
+}
+.quien-parrafo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+}
+.quien-parrafo p{
+    font-family: 'Dosis', sans-serif;
+}
+.quien-parrafo strong{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/* UBICACION */
+h2{
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    margin: 20px;
+}
+iframe{
+    margin: 0 auto;
+    display: block;
+    width: 1200px;
+    height: 800px;
+}
+/* CONTACTO */
+.contacto{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.logoig{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logoig img{
+    margin-right: 40px;
+    max-width: 400px;
+    max-height: 200px;
+}
+.logoig p{
+    color: white;
+}
+
+.logoubicacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logoubicacion img{
+    margin-left: 40px;
+    max-width: 700px;
+    max-height: 200px;
+}
+.logoubicacion p{
+    color: white;
+    margin-right: 200px;
+}
+.logofacebook{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logofacebook img{
+    margin-left: 120px;
+    margin-right: 120px;
+    max-width: 150px;
+    max-height: 200px;
+}
+.logofacebook p{
+    color: white;
+}
+.logowpp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logowpp img{
+    margin-top: 80px;
+    margin-left:120px ;
+    margin-right: 120px;
+    max-width: 150px;
+    max-height: 200px;
+}
+.logowpp p{
+    color: white;
+}
+/*  TODAS LAS COMIDAS */
+.comidas{
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.platos-menu{
+    margin: 40px;
+    border-radius: 20px;
+    background-color:rgb(156, 198, 179) ;
+}
+.pollo{
+    margin-right: 180px;
+}
+.platos-menu img{
+    border-radius: 100%;
+    width: 500px;
+    height: 300px;
+}
+}
+@media screen and (max-width: 480px), (max-width: 1023px) {
+        #grid-container{
+            display: grid;
+            grid-template: 
+            "header"    auto
+            "main"      auto
+            "footer"    auto
+        ;
+    }
+    .header{
+        grid-area: header;
+        background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../IMAGENES/fondo2.jfif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .main{
+        grid-area: main;
+        position: relative;
+        background-color: rgb(43, 138, 130);
+    }
+    .footer{
+        grid-area: footer;
+        background-color: rgb(54, 32, 3);
+    } 
+    
+    /* HEADER y LOGO */
+    .logos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo{
+        font-family: 'Splash', cursive;
+        color: white;
+        font-size:45px;
+        font-weight: bold;
+    }
+    .logo{
+        width: 60px;
+        margin-right: 40px ;
+    }
+    .nav-bar{
+        height: 100%;
+    }
+    .menu{
+        grid-column: 1/7;
+        grid-row: 2/3;
+        display: grid;
+    }
+    .menu li{
+        list-style: none;
+    }
+    .menu a{
+        margin: 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: monospace;
+    }
+    /* FOOTER */
+    footer{
+        display: grid;
+    }
+    .subtitulo-footer{
+        font-family:'Splash', cursive ;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px;
+        max-width: 50%;
+    }
+    footer img{
+        margin-top: 8px;
+    }
+    #footer-logos{
+        max-width: 10%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .whatsapp{
+        height: 40px;
+        margin-right: 5px;
+    }
+    .facebook{
+        height: 30px;
+    }
+    .instagram{
+        height: 30px;
+        margin-right: 8px;
+    }
+    .datos-footer{
+        color: white;
+        max-width: 1px;
+    }
+    /* INDEX */
+    .carrousel{
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    .carrousel img{
+        max-width: 500px;
+        height: 300px;
+    }
+    .carrousel a{
+        text-decoration: none;
+    }
+    /* QUIENES SOMOS */
+    .quienes-somos{
+        text-align: center;
+        background-image: linear-gradient(rgb(60, 129, 114),rgb(105, 105, 105));
+    }
+    .quien-parrafo{
+        font-size: 28px;
+        color: white;
+    }
+    /* UBICACION */
+    h2{
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        margin: 20px;
+    }
+    iframe{
+        height: 500px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    /* COMIDAS /VEGETARIANOS/POSTRES*/
+    .platos-menu{
+        background-image: linear-gradient(rgb(60, 129, 114),rgb(105, 105, 105));
+        text-align: center;
+        border-radius: 5px;
+    
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .platos-menu img{
+        max-width: 100px;
+        margin: 0 auto;
+        display: block;
+        border: solid 2px rgb(163, 135, 102);
+    }
+    .platos-menu cite{
+        color: rgb(136, 136, 136);
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 10px;
+    } 
+    .platos-menu li{
+        color: white;
+    }
+    /* CONTACTO */
+    .contacto{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .logoig{
+        display: flex;
+        justify-content: space-around;
+    }
+    .logoig img{
+        margin-right: 40px;
+        max-width: 400px;
+        max-height: 200px;
+    }
+    .logoig p{
+    color: white;
+    margin-top: 80px;
+}
+
+.logoubicacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logoubicacion img{
+    margin-left: 40px;
+    max-width: 700px;
+    max-height: 200px;
+}
+.logoubicacion p{
+    color: white;
+    margin-right: 200px;
+}
+.logofacebook{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logofacebook img{
+    margin-left: 120px;
+    margin-right: 120px;
+    max-width: 150px;
+    max-height: 200px;
+}
+.logofacebook p{
+    color: white;
+}
+.logowpp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logowpp img{
+    margin-top: 80px;
+    margin-left:120px ;
+    margin-right: 120px;
+    max-width: 150px;
+    max-height: 200px;
+}
+.logowpp p{
+    color: white;
+}
+}
+@media screen and (max-width:480px){
+        #grid-container{
+                display: grid;
+                grid-template: 
+                "header"    auto
+                "main"      auto
+                "footer"    300px
+            ;
+            text-align: center;
+        }
 .header{
     grid-area: header;
     background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../IMAGENES/fondo2.jfif);
@@ -38,7 +501,7 @@ body{
     grid-area: footer;
     background-color: rgb(54, 32, 3);
 } 
-
+        
 /* HEADER */
 .logos{
     display: flex;
@@ -79,14 +542,15 @@ footer{
     font-family:'Splash', cursive ;
     color: white;
     font-weight: bold;
-    margin-top: 20px;
-    max-width: 50%;
+    margin-top: 10px;
+    max-width: 25%;
 }
 footer img{
     margin-top: 8px;
 }
 #footer-logos{
     max-width: 10%;
+    max-height: 85%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -102,27 +566,32 @@ footer img{
 .instagram{
     height: 30px;
     margin-right: 8px;
-}
+        }
 .datos-footer{
     color: white;
     max-width: 1px;
 }
 /* INDEX */
 .carrousel{
-    width: auto;
-    height: auto;
+    margin: 0 auto;
+    max-width: 450px;
 }
+.carrousel img{
+    max-width: 450px;
+    height: 300px;
+}
+
 
 /* QUIENES SOMOS */
 .quienes-somos{
     text-align: center;
-    background-image: linear-gradient(rgb(60, 129, 114),rgb(21, 16, 83));
+    background-image: linear-gradient(rgb(60, 129, 114),rgb(105, 105, 105));
 }
 .quien-parrafo{
-    font-size: 28px;
-    color: white;
+            font-size: 28px;
+            color: white;
 }
-/* UBICACION */
+ /* UBICACION */
 iframe{
     height: 500px;
     width: 100%;
@@ -130,7 +599,7 @@ iframe{
 }
 /* COMIDAS /VEGETARIANOS/POSTRES*/
 .platos-menu{
-    background-image: linear-gradient(#F5F7FA,#B8C6DB);
+    background-image: linear-gradient(rgb(60, 129, 114),rgb(105, 105, 105));
     text-align: center;
     border-radius: 5px;
 
@@ -150,152 +619,69 @@ iframe{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 10px;
 }
-}
-@media screen and (max-width: 480px), (max-width: 1023px) {
-    .grid-container{
-        display: grid;
-        grid-template: 
-        "header"    auto
-        "main"      auto
-        "footer"    auto
-    ;
-}
-.header{
-    grid-area: header;
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../IMAGENES/fondo2.jfif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.main{
-    grid-area: main;
-    position: relative;
-    background-color: rgb(43, 138, 130);
-}
-.footer{
-    grid-area: footer;
-    background-color: rgb(54, 32, 3);
-} 
-
-/* HEADER y LOGO */
-.logos{
+/* CONTACTO */
+.contacto{
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.titulo{
-    font-family: 'Splash', cursive;
-    color: white;
-    font-size:45px;
-    font-weight: bold;
-}
-.logos .logo{
-    width: 60px;
-    margin-right: 40px ;
-}
-.nav-bar{
-    height: 100%;
-}
-.nav-bar .menu{
-    grid-column: 1/7;
-    grid-row: 2/3;
-    display: grid;
-}
-.nav-bar .menu li{
-    list-style: none;
-}
-.nav-bar .menu a{
-    margin: 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: monospace;
-}
-/* FOOTER */
-footer{
-    display: grid;
-}
-.subtitulo-footer{
-    font-family:'Splash', cursive ;
-    color: white;
-    font-weight: bold;
-    margin-top: 20px;
-    max-width: 50%;
-}
-footer img{
-    margin-top: 8px;
-}
-#footer-logos{
-    max-width: 10%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
 }
-.whatsapp{
-    height: 40px;
-    margin-right: 5px;
+.logoig{
+    display: flex;
+    justify-content: space-around;
 }
-.facebook{
-    height: 30px;
+.logoig img{
+    margin-right: 40px;
+    max-width: 180px;
+    max-height: 200px;
 }
-.instagram{
-    height: 30px;
-    margin-right: 8px;
-}
-.datos-footer{
-    color: white;
-    max-width: 1px;
-}
-/* INDEX */
-.slide{
-    height: 100%;
-    margin-top: 50px;
-    display: grid;
-}
-.slide img{
-    background: fixed;
-    max-width: 100%;
-    max-height: 400px;
+.logoig p{
+color: white;
+margin-top: 80px;
 }
 
-/* QUIENES SOMOS */
-.quienes-somos{
-    text-align: center;
-    background-image: linear-gradient(rgb(60, 129, 114),rgb(21, 16, 83));
+.logoubicacion{
+display: flex;
+justify-content: space-around;
+align-items: center;
 }
-.quien-parrafo{
-    font-size: 28px;
-    color: white;
+.logoubicacion img{
+margin-left: 10px;
+max-width: 200px;
+max-height: 200px;
 }
-/* UBICACION */
-iframe{
-    height: 500px;
-    width: 100%;
-    margin-top: 20px;
+.logoubicacion p{
+color: white;
+margin-right: 20px;
 }
-/* COMIDAS /VEGETARIANOS/POSTRES*/
-.platos-menu{
-    background-image: linear-gradient(#F5F7FA,#B8C6DB);
-    text-align: center;
-    border-radius: 5px;
-
-    max-width: 300px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+.logofacebook{
+display: flex;
+justify-content: space-around;
+align-items: center;
 }
-.platos-menu img{
-    max-width: 100px;
-    margin: 0 auto;
-    display: block;
-    border: solid 2px rgb(163, 135, 102);
+.logofacebook img{
+margin-left: 60px;
+margin-right: 30px;
+max-width: 70px;
+max-height: 200px;
 }
-.platos-menu cite{
-    color: rgb(136, 136, 136);
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 10px;
-} 
+.logofacebook p{
+color: white;
+margin-left: 60px;
+}
+.logowpp{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.logowpp img{
+margin-top: 20px;
+margin-left:59px ;
+margin-right: 80px;
+max-width: 70px;
+max-height: 200px;
+}
+.logowpp p{
+color: white;
+}
 }
