@@ -17,14 +17,14 @@ body{
     #grid-container{
         display: grid;
         grid-template: 
-        "header"    200px
+        "header"    100px
         "main"      auto
         "footer"    100px
     ;
 }
 .header{
     grid-area: header;
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../IMAGENES/fondo2.jfif);
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/fondo2.jfif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,7 +134,7 @@ footer img{
     text-decoration: none;
 }
 #main{
-    background-image: linear-gradient(rgb(131, 131, 131),rgb(20, 20, 20));
+    background-image: linear-gradient(rgb(60, 17, 17), rgb(32, 20, 3));
 }
 /* QUIENES SOMOS */
 .quienes-somos{
@@ -264,7 +264,7 @@ iframe{
     }
     .header{
         grid-area: header;
-        background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../IMAGENES/fondo2.jfif);
+        background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(.img/fondo2.jfif);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -360,7 +360,7 @@ iframe{
         height: 30px;
     }
     .instagram{
-        height: 30px;
+        height: 70px;
         margin-right: 8px;
     }
     .datos-footer{
