@@ -105,12 +105,15 @@ body {
     align-items: center;
   }
   .whatsapp {
-    height: 40px;
+    width: 40px;
+    height: 50px;
   }
   .facebook {
-    height: 30px;
+    width: 60px;
+    height: 40px;
   }
   .instagram {
+    width: 100px;
     height: 80px;
   }
   .datos-footer {
@@ -323,6 +326,17 @@ body {
     color: rgb(80, 20, 20);
   }
   /*FOOTER*/
+  /*MAPS*/
+  /*EACH*/
+  .whatsapp {
+    background-color: rgb(115, 154, 115);
+  }
+  .facebook {
+    background-color: rgb(22, 22, 66);
+  }
+  .instagram {
+    background-color: rgb(60, 16, 60);
+  }
   footer {
     display: grid;
   }
@@ -400,8 +414,14 @@ body {
     font-family: Georgia, "Times New Roman", Times, serif;
     margin: 10px;
   }
-  .platos-menu li {
+  .platos-menu .caja1, .platos-menu .caja3, .platos-menu .caja2 {
     color: white;
+  }
+  .platos-menu .caja2 {
+    color: rgb(182, 182, 223);
+  }
+  .platos-menu .caja3 {
+    color: #dccdbd;
   }
   /*UBICACION*/
   h3 {

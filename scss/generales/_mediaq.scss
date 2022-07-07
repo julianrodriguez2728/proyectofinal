@@ -91,14 +91,18 @@ footer{
     justify-content: space-around;
     align-items: center;
 }
+@mixin logosfooter($height,$width) {
+    width: $width;
+    height: $height;
+}
 .whatsapp{
-    height: 40px;
+    @include logosfooter(50px,40px )
 }
 .facebook{
-    height: 30px;
+    @include logosfooter(40px,60px )
 }
 .instagram{
-    height: 80px;
+    @include logosfooter(80px,100px )
 }
 .datos-footer{
     color: white;
@@ -314,6 +318,18 @@ iframe{
     }
 }
 /*FOOTER*/
+/*MAPS*/
+$footer:(
+    whatsapp: rgb(115, 154, 115),
+    facebook: rgb(22, 22, 66),
+    instagram: rgb(60, 16, 60),
+);
+/*EACH*/
+@each $nombre, $valor in $footer {
+    .#{$nombre}{
+        background-color: $valor;
+    }
+}
 footer{
     display: grid;
     img{
@@ -391,8 +407,16 @@ footer{
         font-family: Georgia, 'Times New Roman', Times, serif;
         margin: 10px;
     } 
-    li{
+    .caja1{
         color: white;
+    }
+    .caja2{
+        @extend .caja1;
+        color: rgb(182, 182, 223);
+    }
+    .caja3{
+        @extend .caja1;
+        color: #dccdbd;
     }
 }
 /*UBICACION*/
