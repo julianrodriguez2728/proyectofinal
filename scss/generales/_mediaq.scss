@@ -1,4 +1,5 @@
 @import "fuentes";
+@import "colores";
 /*DESKTOP*/
 @media  screen and (min-width: 1023px){
     #grid-container{
@@ -23,7 +24,7 @@
 }
 .footer{
     grid-area: footer;
-    background-color: rgb(32, 20, 3);
+    background-color: $footer;
 } 
 /*HEADER Y LOGO*/
 #header{
@@ -39,7 +40,7 @@
     height: 100px;
 }
 .titulo{
-    color: rgb(213, 236, 232);
+    color:$titulo;
     font-family: 'Splash', cursive;
     font-size: 60px;
     font-weight: bold;
@@ -53,7 +54,7 @@
         li{
             margin-right: 90px;
             font-size: 27px;
-            color: #dee7eb;
+            color: $titulo;
             list-style: none;
         }
         a{
@@ -61,12 +62,12 @@
             text-decoration: none;
             
         
-            box-shadow: inset 1 0 0 0 #5f3a10;
+            box-shadow: inset 1 0 0 0 $links;
             margin: 0 -.30rem;
             padding: 0 .30rem;
             transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
             &:hover{
-                box-shadow: inset 200px 0 0 0 rgb(102, 54, 8);
+                box-shadow: inset 200px 0 0 0 $links;
             }
         }
     }
@@ -80,7 +81,7 @@ footer{
     }
 }
 .subtitulo-footer{
-    color: white;
+    color: $titulo;
     font-size: 40px;
     font-family: 'Splash', cursive;
 }
@@ -105,7 +106,7 @@ footer{
     @include logosfooter(80px,100px )
 }
 .datos-footer{
-    color: white;
+    color: $titulo;
     margin-right: 50px;
     margin-left: 10px;
 }
@@ -122,12 +123,12 @@ footer{
     }
     a{
         text-decoration: none;
-        color: white;
+        color: $titulo;
     }
 }
 /*QUIENES SOMOS*/
 .quienes-somos{
-    background-color: rgb(254, 255, 205);
+    background-color: $quienes-somos;
     text-align: center;
     margin: 0 auto;
     height: 100%;
@@ -145,7 +146,7 @@ footer{
 }
 /*UBICACION*/
 h3{
-    color: white;
+    color: $titulo;
     font-size: 80px;
     font-weight: bold;
     margin: 20px;
@@ -173,7 +174,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
     }
 }
 .logoubicacion{
@@ -186,7 +187,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
         margin-right: 200px;
     }
 }
@@ -201,7 +202,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
     }
 }
 .logowpp{
@@ -216,7 +217,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
     }
 }
 /*  TODAS LAS COMIDAS */
@@ -229,7 +230,7 @@ iframe{
 .platos-menu{
     margin: 40px;
     border-radius: 20px;
-    background-color:rgb(156, 198, 179) ;
+    background-color:$menu;
     img{
         border-radius: 100%;
         width: 500px;
@@ -260,11 +261,11 @@ iframe{
 .main{
     grid-area: main;
     position: relative;
-    background-color: rgb(43, 138, 130);
+    background-color: $main;
 }
 .footer{
     grid-area: footer;
-    background-color: rgb(54, 32, 3);
+    background-color: $footer;
 } 
 /*HEADER Y LOGO*/
 .logos{
@@ -274,7 +275,7 @@ iframe{
 }
 .titulo{
     font-family: 'Splash', cursive;
-    color: white;
+    color: $titulo;
     font-size:45px;
     font-weight: bold;
 }
@@ -304,7 +305,7 @@ iframe{
     a{
         margin: 20px;
         text-decoration: none;
-        color: white;
+        color: $titulo;
         font-size: 30px;
         font-weight: bold;
         font-family: monospace;
@@ -314,15 +315,15 @@ iframe{
     transition: font-size 0.2s;
     &:hover{
         font-size: 50px;
-        color: rgb(80, 20, 20);
+        color: $linktablet;
     }
 }
 /*FOOTER*/
 /*MAPS*/
 $footer:(
-    whatsapp: rgb(115, 154, 115),
-    facebook: rgb(22, 22, 66),
-    instagram: rgb(60, 16, 60),
+    whatsapp: $whatsapp,
+    facebook: $facebook,
+    instagram: $instagram,
 );
 /*EACH*/
 @each $nombre, $valor in $footer {
@@ -338,7 +339,7 @@ footer{
 }
 .subtitulo-footer{
     font-family:'Splash', cursive ;
-    color: white;
+    color: $titulo;
     font-weight: bold;
     margin-top: 20px;
     max-width: 50%;
@@ -362,7 +363,7 @@ footer{
     margin-right: 8px;
 }
 .datos-footer{
-    color: white;
+    color: $titulo;
     max-width: 1px;
 }
 /*INDEX*/
@@ -399,29 +400,29 @@ footer{
         max-width: 100px;
         margin: 0 auto;
         display: block;
-        border: solid 2px rgb(163, 135, 102);
+        border: solid 2px $bordescomida;
     }
     cite{
-        color: rgb(136, 136, 136);
+        color: $cite;
         font-size: 20px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         margin: 10px;
     } 
     .caja1{
-        color: white;
+        color: $titulo;
     }
     .caja2{
         @extend .caja1;
-        color: rgb(182, 182, 223);
+        color: $comida1;
     }
     .caja3{
         @extend .caja1;
-        color: #dccdbd;
+        color: $comida2;
     }
 }
 /*UBICACION*/
 h3{
-    color: white;
+    color: $titulo;
     font-size: 50px;
     font-weight: bold;
     margin: 20px;
@@ -447,7 +448,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
         margin-top: 80px;
     }
 }
@@ -461,7 +462,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
         margin-right: 200px;
     }
 }
@@ -476,7 +477,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
     }
 }
 .logowpp{
@@ -491,7 +492,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
     }
 }
 }
@@ -516,11 +517,11 @@ background-attachment: fixed;
 .main{
 grid-area: main;
 position: relative;
-background-color: rgb(43, 138, 130);
+background-color: $main;
 }
 .footer{
 grid-area: footer;
-background-color: rgb(54, 32, 3);
+background-color: $footer;
 } 
 .logos{
     display: flex;
@@ -528,7 +529,7 @@ background-color: rgb(54, 32, 3);
 }
 .titulo{
     font-family: 'Splash', cursive;
-    color: white;
+    color: $titulo;
     font-size:45px;
     font-weight: bold;
 }
@@ -548,7 +549,7 @@ background-color: rgb(54, 32, 3);
     }
     a{
         text-decoration: none;
-        color: white;
+        color: $titulo;
         font-size: 30px;
         font-weight: bold;
         font-family: monospace;
@@ -563,7 +564,7 @@ footer{
 }
 .subtitulo-footer{
     font-family:'Splash', cursive ;
-    color: white;
+    color: $titulo;
     font-weight: bold;
     margin-top: 10px;
     max-width: 25%;
@@ -588,7 +589,7 @@ footer{
     margin-right: 8px;
         }
 .datos-footer{
-    color: white;
+    color: $titulo;
     max-width: 1px;
 }
 /*INDEX*/
@@ -607,11 +608,11 @@ footer{
 }
 .quien-parrafo{
             font-size: 28px;
-            color: white;
+            color: $titulo;
 }
 /*UBICACION*/
 h3{
-    color: white;
+    color: $titulo;
 }
 iframe{
     height: 500px;
@@ -631,10 +632,10 @@ iframe{
         max-width: 100px;
         margin: 0 auto;
         display: block;
-        border: solid 2px rgb(163, 135, 102);
+        border: solid 2px $bordescomida;
     }
     cite{
-        color: rgb(136, 136, 136);
+        color: $cite;
         font-size: 20px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         margin: 10px;
@@ -656,7 +657,7 @@ iframe{
         max-height: 200px;
     }
     p{
-        color: white;
+        color: $titulo;
         margin-top: 80px;
         }
 }
@@ -670,7 +671,7 @@ iframe{
         max-height: 200px;
         }
         p{
-            color: white;
+            color: $titulo;
             margin-right: 20px;
             }  
 }
@@ -685,7 +686,7 @@ iframe{
         max-height: 200px;
         }
         p{
-            color: white;
+            color: $titulo;
             margin-left: 60px;
             }
 }
@@ -701,7 +702,7 @@ iframe{
         max-height: 200px;
         }
         p{
-            color: white;
+            color: $titulo;
             }
     }
 }
